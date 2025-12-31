@@ -5,8 +5,8 @@
 -- Use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- Enable OSC 52 clipboard for SSH sessions (Neovim 0.10+)
-if vim.env.SSH_TTY then
+-- Enable OSC 52 clipboard for SSH/tmux sessions (Neovim 0.10+)
+if vim.env.SSH_TTY or vim.env.TMUX then
   vim.g.clipboard = {
     name = "OSC 52",
     copy = {
