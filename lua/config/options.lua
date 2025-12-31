@@ -4,7 +4,11 @@
 
 -- Use system clipboard
 vim.opt.clipboard = "unnamedplus"
+vim.g.autoformat = false
 
+-- Enable line wrapping (no horizontal overflow)
+vim.opt.wrap = true
+vim.opt.linebreak = true
 -- Enable OSC 52 clipboard for SSH/tmux sessions (Neovim 0.10+)
 if vim.env.SSH_TTY or vim.env.TMUX then
   vim.g.clipboard = {
@@ -19,3 +23,4 @@ if vim.env.SSH_TTY or vim.env.TMUX then
     },
   }
 end
+
