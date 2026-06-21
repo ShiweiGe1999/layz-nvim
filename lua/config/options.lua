@@ -10,7 +10,7 @@ vim.g.autoformat = false
 vim.opt.wrap = true
 vim.opt.linebreak = true
 -- Enable OSC 52 clipboard for SSH/tmux sessions (Neovim 0.10+)
-if vim.env.SSH_TTY or vim.env.TMUX then
+if vim.env.SSH_TTY and vim.env.TMUX then
   vim.g.clipboard = {
     name = "OSC 52",
     copy = {
